@@ -4,7 +4,7 @@
 
 ## Installation
 
-Flower Spot requires [Node.js](https://nodejs.org/) v14+ to run.
+BlackBirdMarketing requires [Node.js](https://nodejs.org/) v14+ to run.
 Install the dependencies and devDependencies.
 
 For frontend environments...
