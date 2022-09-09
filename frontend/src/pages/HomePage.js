@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Header } from '../components/header/Header';
 import { setTheme } from '../redux/actions';
+import { Button } from 'antd';
 
 export const HomePage = () => {
   const colorScheme = useSelector((state) => state);
@@ -11,7 +12,7 @@ export const HomePage = () => {
     <>
       <Header />
       Color Theme: {colorScheme}
-      <button onClick={() => dispatch(setTheme(colorScheme))}>Switch theme</button>
+      <Button onClick={() => dispatch(setTheme(colorScheme))}>Switch theme</Button>
     </>
   );
 };
