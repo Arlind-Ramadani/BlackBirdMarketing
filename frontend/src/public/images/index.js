@@ -1,0 +1,9 @@
+export const logo = require('./logo.svg');
+export const arrowUp = require('./arrowUp.svg');
+export const arrowDown = require('./arrowDown.svg');
+export const bitcoin = require('./bitcoin.svg');
+export const iota = require('./iota.svg');
+export const mnr = require('./mnr.svg');
+export const nem = require('./nem.svg');
+export const xrp = require('./xrp.svg');
+export const byc = require('./byc.svg');

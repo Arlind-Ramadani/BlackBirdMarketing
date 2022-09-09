@@ -1,0 +1,51 @@
+.marquee-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 17px 0;
+  background-color: rgba($color: $COLORS-black, $alpha: 0.5);
+
+  .slider-item {
+    margin: 0 20px;
+    display: flex !important;
+    gap: 25px;
+
+    p {
+      display: flex;
+      align-items: center;
+      color: $COLORS-white;
+      font-family: $FONT-montserrat-Medium;
+      font-size: 24px;
+      line-height: 29px;
+      gap: 12px;
+
+      > img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+
+        &.green {
+          color: $COLORS-green_300;
+        }
+
+        &.red {
+          color: $COLORS-red_300;
+        }
+
+        > img {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
