@@ -1,0 +1,113 @@
+.features-wrapper {
+  padding: 0 185px;
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba($color: $COLORS-black, $alpha: 0.5);
+
+    &.active {
+      display: block;
+    }
+
+    iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .close {
+      font-size: 62px;
+      color: $COLORS-white;
+      position: absolute;
+      top: 50px;
+      right: 50px;
+    }
+  }
+
+  .video-wrapper {
+    border-radius: 30px;
+    width: 100%;
+    height: 628px;
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    background-image: url('../../public/images/videoImage.png');
+    background-size: cover;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $COLORS-black, $alpha: 0.3);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  .feature-container {
+    background-image: url('../../public/images/octagonOutline.png');
+    background-repeat: no-repeat;
+    display: flex;
+    gap: 70px;
+    padding-left: 60px;
+
+    .container-left {
+      margin-top: 300px;
+    }
+
+    .container-right {
+      margin-top: 150px;
+    }
+
+    .feature-item {
+      padding: 40px 40px 26px 40px;
+      width: 348px;
+      min-height: 348px;
+      background-color: $COLORS-gray_400;
+      margin-bottom: 40px;
+      border-radius: 34px;
+
+      img {
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 36px;
+        line-height: 44px;
+        font-family: $FONT-montserrat-Regular;
+
+        span {
+          font-size: 56px;
+          line-height: 68px;
+          font-family: $FONT-montserrat-SemiBold;
+          display: block;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

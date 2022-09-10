@@ -8,6 +8,7 @@ import { FAQ } from '../components/faq/FAQ';
 import { Footer } from '../components/footer/Footer';
 import { Testimonials } from '../components/testimonials/Testimonials';
 import { Statistics } from '../components/statistics/Statistics';
+import { Features } from '../components/features/Features';
 
 export const HomePage = () => {
   const colorScheme = useSelector((state) => state);
@@ -19,6 +20,7 @@ export const HomePage = () => {
       <Hero />
       Color Theme: {colorScheme}
       <Button onClick={() => dispatch(setTheme(colorScheme))}>Switch theme</Button>
+      <Features />
       <Statistics />
       <Testimonials />
       <FAQ />
