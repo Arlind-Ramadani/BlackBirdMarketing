@@ -11,3 +11,5 @@ export const moon = require('./moon.png');
 export const sun = require('./sun.png');
 export const heroBackground = require('./heroBackground.png');
 export const crypto_banner = require('./crypto_banner.png');
+export const octagon = require('./octagon.png');
+export const arrowUpOutline = require('./arrowUpOutline.svg');

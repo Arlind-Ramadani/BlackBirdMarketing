@@ -7,7 +7,7 @@ import { OutlineButton } from '../button/OutlineButton';
 export const Hero = () => {
   return (
     <div className="hero-wrapper">
-      <Row gutter={16}>
+      <Row>
         <Col className="gutter-row" span={12}>
           <h1>Digital currency leads at market in the right amount.</h1>
           <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. </p>

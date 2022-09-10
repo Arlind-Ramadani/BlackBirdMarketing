@@ -1,0 +1,74 @@
+.faq-wrapper {
+  padding: 0 158px;
+
+  .faq-content {
+    margin-right: 100px;
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 55px;
+    }
+
+    .faq-image {
+      width: 70%;
+      margin-top: 80px;
+    }
+  }
+
+  .ant-collapse {
+    background-color: transparent;
+    border: none;
+  }
+
+  .ant-collapse-item-active {
+    .ant-collapse-header {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      background-color: $COLORS-green_600;
+    }
+  }
+
+  .ant-collapse-item {
+    background-color: $COLORS-gray_400;
+    border: none;
+    margin-bottom: 30px;
+    border-radius: $border-radius;
+
+    &:last-child {
+      border-radius: $border-radius;
+    }
+
+    .ant-collapse-arrow {
+      right: 50px !important;
+      width: 36px;
+      transition: all 0.3s;
+
+      &.active {
+        transform: rotate(-180deg);
+      }
+    }
+
+    > .ant-collapse-content {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      background-color: $COLORS-gray_400;
+      border-top: 0;
+      padding: 30px 50px;
+
+      &.ant-collapse-content > .ant-collapse-content-box {
+        padding: 0;
+      }
+    }
+
+    .ant-collapse-header {
+      padding: 45px 50px;
+
+      span {
+        font-size: 40px;
+        line-height: 64px;
+        color: $COLORS-white;
+        font-family: $FONT-montserrat-Medium;
+      }
+    }
+  }
+}

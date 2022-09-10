@@ -7,15 +7,13 @@ export const Topbar = () => {
     speed: 8000,
     autoplay: true,
     autoplaySpeed: 0,
-    centerMode: true,
     cssEase: 'linear',
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    focusOnSelect: false,
     variableWidth: true,
     infinite: true,
-    initialSlide: 1,
     arrows: false,
     buttons: false,
+    draggable: false,
   };
 
   return (

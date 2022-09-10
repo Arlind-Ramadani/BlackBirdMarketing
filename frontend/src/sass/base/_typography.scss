@@ -48,11 +48,33 @@ h4 {
 }
 
 /**
+   * Main titles
+   */
+h1 {
+  font-size: 64px;
+  line-height: 102px;
+  font-family: $FONT-montserrat-SemiBold;
+  color: $COLORS-white;
+
+  @media (max-width: 1920px) {
+    font-size: 52px;
+    line-height: 76px;
+  }
+}
+
+/**
    * Chapter titles
    */
 h2 {
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 64px;
+  line-height: 102px;
+  font-family: $FONT-montserrat-SemiBold;
+  color: $COLORS-white;
+
+  @media (max-width: 1920px) {
+    font-size: 52px;
+    line-height: 76px;
+  }
 }
 
 /**
@@ -69,6 +91,18 @@ h4 {
   color: rgb(107, 120, 133);
   font-size: 1em;
   text-transform: uppercase;
+}
+
+p {
+  font-size: 40px;
+  line-height: 64px;
+  font-family: $FONT-montserrat-Regular;
+  color: $COLORS-white;
+
+  @media (max-width: 1920px) {
+    font-size: 32px;
+    line-height: 48px;
+  }
 }
 
 /**
