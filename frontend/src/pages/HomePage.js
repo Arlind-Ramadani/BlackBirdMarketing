@@ -9,6 +9,7 @@ import { Footer } from '../components/footer/Footer';
 import { Testimonials } from '../components/testimonials/Testimonials';
 import { Statistics } from '../components/statistics/Statistics';
 import { Features } from '../components/features/Features';
+import { Promotions } from '../components/promotions/Promotions';
 
 export const HomePage = () => {
   const colorScheme = useSelector((state) => state);
@@ -18,13 +19,14 @@ export const HomePage = () => {
     <>
       <Header />
       <Hero />
-      Color Theme: {colorScheme}
-      <Button onClick={() => dispatch(setTheme(colorScheme))}>Switch theme</Button>
+      <Promotions />
       <Features />
       <Statistics />
       <Testimonials />
       <FAQ />
       <Footer />
+      Color Theme: {colorScheme}
+      <Button onClick={() => dispatch(setTheme(colorScheme))}>Switch theme</Button>
     </>
   );
 };

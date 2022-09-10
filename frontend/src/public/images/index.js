@@ -31,3 +31,4 @@ export const heart = require('./heart.png');
 export const group = require('./group.png');
 export const videoImage = require('./videoImage.png');
 export const playButton = require('./playButton.png');
+export const promotions = require('./promotions.png');
