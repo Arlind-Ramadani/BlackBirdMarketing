@@ -13,7 +13,7 @@ export const Menu = () => {
       <img src={logo.default} alt="logo" className="logo" />
       <Navigation />
       <Authentication />
-      <button className="btn" onClick={() => dispatch(setTheme(colorScheme))}>
+      <button className="btn colorScheme-btn" onClick={() => dispatch(setTheme(colorScheme))}>
         {colorScheme === 'light' ? <img src={moon} alt="moon" /> : <img src={sun} alt="sun" />}
       </button>
     </div>

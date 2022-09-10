@@ -1,10 +1,12 @@
 import { Col, Row } from 'antd';
 import { CloseCircleOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
-import { box, coins, group, heart, octagon, playButton } from '../../public/images';
+import { box, coins, group, heart, octagon, octagonWhite, playButton } from '../../public/images';
+import { useSelector } from 'react-redux';
 
 export const Features = () => {
   const [modal, setModal] = useState(false);
+  const colorScheme = useSelector((state) => state);
 
   const handleVideoClick = () => {
     setModal(!modal);
@@ -27,7 +29,7 @@ export const Features = () => {
 
       <Row>
         <Col span={11}>
-          <img src={octagon} alt="octagon" />
+          <img src={colorScheme === 'dark' ? octagon : octagonWhite} alt="octagon" />
           <h2>Fusce placerat enim et odio</h2>
           <p>Sed imperdiet enim ligula, vitae viverra justo porta vel.</p>
 

@@ -1,5 +1,9 @@
-body {
+.dark {
   background-color: $COLORS-gray_500;
+}
+
+.light {
+  background-color: $COLORS-white;
 }
 
 .container {

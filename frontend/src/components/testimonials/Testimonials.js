@@ -1,21 +1,32 @@
 import Slider from 'react-slick';
 import React from 'react';
-import { leftArrow, octagon, person, rightArrow } from '../../public/images';
+import {
+  leftArrow,
+  leftArrowWhite,
+  octagon,
+  octagonWhite,
+  person,
+  rightArrow,
+  rightArrowWhite,
+} from '../../public/images';
+import { useSelector } from 'react-redux';
 
 export const Testimonials = () => {
+  const colorScheme = useSelector((state) => state);
+
   var settings = {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
     dots: true,
-    prevArrow: <img src={leftArrow} alt="arrow" />,
-    nextArrow: <img src={rightArrow} alt="arrow" />,
+    prevArrow: <img src={colorScheme === 'dark' ? leftArrow : leftArrowWhite} alt="arrow" />,
+    nextArrow: <img src={colorScheme === 'dark' ? rightArrow : rightArrowWhite} alt="arrow" />,
   };
 
   return (
     <div className="testimonial-wrapper">
-      <img src={octagon} alt="octagon" />
+      <img src={colorScheme === 'dark' ? octagon : octagonWhite} alt="octagon" />
       <h2>What our members said?</h2>
       <p className="xl">Nam sollicitudin dignissim nunc, cursus ullamcorper.</p>
 

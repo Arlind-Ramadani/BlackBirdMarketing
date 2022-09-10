@@ -1,15 +1,19 @@
 import { Col, Collapse, Row } from 'antd';
 import React from 'react';
-import { arrowUpOutline, crypto_banner, octagon } from '../../public/images';
+import { useSelector } from 'react-redux';
+import { arrowUpOutline, arrowUpOutlineWhite, crypto_banner, octagon, octagonWhite } from '../../public/images';
 
 export const FAQ = () => {
   const { Panel } = Collapse;
+
+  const colorScheme = useSelector((state) => state);
+
   return (
     <div className="faq-wrapper">
       <Row>
         <Col span={12}>
           <div className="faq-content">
-            <img src={octagon} alt="octagon" />
+            <img src={colorScheme === 'dark' ? octagon : octagonWhite} alt="octagon" />
             <h2>Frequently Asked Questions</h2>
             <p>Nam sollicitudin dignissim nunc, cursus ullamcorper.</p>
 
@@ -22,7 +26,11 @@ export const FAQ = () => {
             defaultActiveKey={['1']}
             expandIconPosition="end"
             expandIcon={({ isActive }) => (
-              <img src={arrowUpOutline.default} className={isActive && 'active'} alt="arrow" />
+              <img
+                src={colorScheme === 'dark' || isActive ? arrowUpOutline.default : arrowUpOutlineWhite.default}
+                className={isActive && 'active'}
+                alt="arrow"
+              />
             )}
           >
             <Panel header="sollicitudin dignissim?" key="1">

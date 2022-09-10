@@ -1,6 +1,6 @@
 .btn {
   color: $COLORS-white;
-  padding: 26px 29px;
+  padding: 26px 68px;
   border: none;
   outline: none;
   box-shadow: none;
@@ -10,6 +10,7 @@
   border-radius: $border-radius;
   background-color: transparent;
   cursor: pointer;
+  text-transform: uppercase;
 
   &.btn-filled {
     background-color: $COLORS-yellow_400;

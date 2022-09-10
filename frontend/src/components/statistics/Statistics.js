@@ -1,11 +1,13 @@
 import { Progress } from 'antd';
-import { bitcoin, iota, mnr, nem, octagon, xrp } from '../../public/images';
+import { useSelector } from 'react-redux';
+import { bitcoin, iota, mnr, nem, octagon, octagonWhite, xrp } from '../../public/images';
 
 export const Statistics = () => {
+  const colorScheme = useSelector((state) => state);
   return (
     <div className="statistics-wrapper">
       <div className="statistics-container">
-        <img src={octagon} alt="octagon" />
+        <img src={colorScheme === 'dark' ? octagon : octagonWhite} alt="octagon" />
         <h2>Fusce placerat enim et odio placerat enim </h2>
         <p>Non aliquip cillum qui laboris et quis reprehenderit laboris quis reprehenderit.</p>
 

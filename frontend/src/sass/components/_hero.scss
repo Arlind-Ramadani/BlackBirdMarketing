@@ -14,6 +14,10 @@
 
   p {
     margin-bottom: 81px;
+
+    .light & {
+      color: $COLORS-white;
+    }
   }
 
   .buttons-wrapper {

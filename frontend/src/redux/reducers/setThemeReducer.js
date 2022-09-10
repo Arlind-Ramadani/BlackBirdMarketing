@@ -1,4 +1,4 @@
-const setThemeReducer = (state = 'light', action) => {
+const setThemeReducer = (state = 'dark', action) => {
   switch (action.type) {
     case 'LIGHT':
       return (state = 'light');

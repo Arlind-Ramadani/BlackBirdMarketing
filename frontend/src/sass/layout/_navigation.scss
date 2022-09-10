@@ -16,6 +16,10 @@
         background-color: $COLORS-gray_500;
         padding: 14px 23px 11px 23px;
         border-radius: $border-radius;
+
+        .light & {
+          background-color: rgba($color: $COLORS-white, $alpha: 0.84);
+        }
       }
     }
 

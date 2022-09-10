@@ -5,6 +5,14 @@
   margin-top: -800px;
   padding-top: 900px;
 
+  .light & {
+    background-image: none;
+
+    p {
+      color: $COLORS-white;
+    }
+  }
+
   .footer-wrapper {
     background-image: url('../../public/images/backgroundFooter.png');
     background-position: bottom center;
@@ -14,6 +22,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    .light & {
+      background-image: url('../../public/images/backgroundFooterWhite.png');
+    }
 
     .footer-menu {
       margin-top: 230px;
