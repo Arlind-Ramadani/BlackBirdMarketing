@@ -1,0 +1,22 @@
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 74px;
+  left: 0;
+  width: 100%;
+  padding: 36px 174px;
+
+  .logo {
+    width: 148px;
+    object-fit: contain;
+    margin-right: 43px;
+  }
+}
+
+.register-button {
+  background-color: $COLORS-yellow_400;
+  padding: 14px 65px;
+  margin-right: auto;
+  margin-left: 89px;
+}

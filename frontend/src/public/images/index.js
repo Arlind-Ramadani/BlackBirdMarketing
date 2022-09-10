@@ -7,3 +7,5 @@ export const mnr = require('./mnr.svg');
 export const nem = require('./nem.svg');
 export const xrp = require('./xrp.svg');
 export const byc = require('./byc.svg');
+export const moon = require('./moon.png');
+export const sun = require('./sun.png');
