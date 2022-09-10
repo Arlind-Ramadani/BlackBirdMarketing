@@ -1,0 +1,36 @@
+.hero-wrapper {
+  background-image: url('../../public/images/heroBackground.png');
+  background-size: contain;
+  background-repeat: round;
+  height: 100vh;
+  padding-top: 300px;
+  padding-left: 6.8%;
+  align-items: flex-end;
+  display: flex;
+
+  h1 {
+    font-size: 64px;
+    line-height: 102px;
+    margin-bottom: 55px;
+    font-family: $FONT-montserrat-SemiBold;
+    color: $COLORS-white;
+  }
+
+  p {
+    font-size: 40px;
+    line-height: 64px;
+    margin-bottom: 81px;
+    font-family: $FONT-montserrat-Regular;
+    color: $COLORS-white;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    gap: 48px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}

@@ -8,7 +8,10 @@
 @import 'base/reset';
 @import 'base/typography';
 
+@import 'themes/theme';
+
 @import 'components/buttons';
+@import 'components/hero';
 
 @import 'layout/topbar';
 @import 'layout/header';

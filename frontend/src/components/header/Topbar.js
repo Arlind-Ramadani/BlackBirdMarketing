@@ -86,6 +86,32 @@ export const Topbar = () => {
             )
           </p>
         </div>
+        <div className="slider-item">
+          <p>
+            <img src={xrp.default} alt="Arrow" />
+            XRP $ 0.003
+          </p>
+          <p>
+            (
+            <span className="red">
+              <img src={arrowDown.default} alt="Arrow" /> 3%
+            </span>
+            )
+          </p>
+        </div>
+        <div className="slider-item">
+          <p>
+            <img src={nem.default} alt="Arrow" />
+            NEM $ 0.003
+          </p>
+          <p>
+            (
+            <span className="green">
+              <img src={arrowUp.default} alt="Arrow" /> 8%
+            </span>
+            )
+          </p>
+        </div>
       </Slider>
     </>
   );
