@@ -81,15 +81,20 @@ h2 {
    * Section headings
    */
 h3 {
-  font-size: 1.5em;
+  font-size: 52px;
+  line-height: 64px;
+  font-family: $FONT-montserrat-Bold;
+  color: $COLORS-white;
 }
 
 /**
    * Sub-headings
    */
 h4 {
-  color: rgb(107, 120, 133);
-  font-size: 1em;
+  font-size: 28px;
+  line-height: 34px;
+  font-family: $FONT-montserrat-Medium;
+  color: $COLORS-yellow_200;
   text-transform: uppercase;
 }
 
@@ -102,6 +107,16 @@ p {
   @media (max-width: 1920px) {
     font-size: 32px;
     line-height: 48px;
+  }
+
+  &.lg {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  &.md {
+    font-size: 24px;
+    line-height: 38px;
   }
 }
 
