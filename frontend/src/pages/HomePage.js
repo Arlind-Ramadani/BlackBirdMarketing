@@ -7,6 +7,7 @@ import { Testimonials } from '../components/testimonials/Testimonials';
 import { Statistics } from '../components/statistics/Statistics';
 import { Features } from '../components/features/Features';
 import { Promotions } from '../components/promotions/Promotions';
+import { CryptoTable } from '../components/cryptoTable/CryptoTable';
 
 export const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ export const HomePage = () => {
       <Promotions />
       <Features />
       <Statistics />
+      <CryptoTable />
       <Testimonials />
       <FAQ />
       <Footer />

@@ -1,0 +1,168 @@
+.cryptoTable-wrapper {
+  margin: 340px 170px 70px 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+
+  .ant-table-wrapper {
+    width: 100%;
+  }
+
+  .ant-table {
+    background-color: transparent;
+    color: $COLORS-blue-200;
+    font-family: $FONT-inter-Regular;
+    font-size: 26px;
+    line-height: 37px;
+
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+      background-color: transparent;
+    }
+
+    .ant-table-cell {
+      padding: 36px 12px;
+      border-bottom: 2px solid #e2e8f0;
+      background-color: transparent;
+      color: inherit;
+      vertical-align: middle;
+    }
+
+    .ant-table-column-sorter-inner {
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .ant-table-thead {
+      background-color: #f7fafc33;
+      font-family: $FONT-inter-Bold;
+      font-size: 22px;
+      line-height: 30px;
+      text-transform: uppercase;
+
+      .ant-table-cell {
+        border: none;
+
+        &::before {
+          display: none;
+        }
+
+        &:first-child {
+          border-top-left-radius: 12px;
+          border-bottom-left-radius: 12px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
+      }
+    }
+  }
+
+  .cryptoTable-search {
+    border: 1px solid #c1d6e9;
+    padding: 22px 50px;
+    width: 780px;
+    background-color: transparent;
+    margin-bottom: 67px;
+    border-radius: $border-radius;
+
+    .ant-input-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    input,
+    .ant-select-selector,
+    .ant-select-selection-placeholder {
+      position: relative;
+      background: transparent;
+      border: none;
+      color: #84aed3;
+      font-size: 16px;
+      line-height: 26px;
+      font-family: $FONT-inter-Regular;
+      padding: 0;
+      outline: none;
+
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: #84aed3;
+      }
+    }
+
+    .ant-select-selection-placeholder {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .ant-input-group-addon {
+      width: auto;
+
+      button,
+      & {
+        background-color: transparent;
+        border: none;
+      }
+
+      .anticon {
+        font-size: 32px;
+        color: #84aed3;
+      }
+    }
+  }
+}
+
+.ant-tag {
+  background-color: #e2e8f04d;
+  color: $COLORS-blue_400;
+  border: none;
+  font-family: $FONT-inter-Medium;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.ant-table-pagination.ant-pagination {
+  background-color: #ffffff33;
+  padding: 33px 45px;
+  font-family: $FONT-inter-Regular;
+
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector,
+  li button,
+  li a:not(.ant-pagination-item-link) {
+    background-color: rgba($color: $COLORS-white, $alpha: 0.3);
+    color: $COLORS-blue-200;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 11px 20px;
+    height: auto;
+  }
+
+  li {
+    background: none;
+    border: none;
+    height: auto;
+    margin-bottom: 0;
+    line-height: 1;
+
+    a:not(.ant-pagination-item-link),
+    button {
+      padding: 16px 20px;
+    }
+
+    &.ant-pagination-jump-next {
+      align-self: self-end;
+
+      .ant-pagination-item-container .ant-pagination-item-ellipsis {
+        position: relative;
+      }
+    }
+  }
+}
