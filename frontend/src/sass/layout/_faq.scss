@@ -1,17 +1,36 @@
 .faq-wrapper {
   padding: 0 158px;
 
+  @include mobile {
+    padding: 0 15px;
+  }
+
   .faq-content {
-    margin-right: 100px;
+    @include tablet {
+      margin-right: 100px;
+    }
 
     h2 {
       margin-top: 20px;
-      margin-bottom: 55px;
+      margin-bottom: 35px;
+
+      @include aboveHD {
+        margin-bottom: 55px;
+      }
     }
 
     .faq-image {
       width: 70%;
-      margin-top: 80px;
+      margin-top: 50px;
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      @include aboveHD {
+        margin-top: 80px;
+      }
     }
   }
 
@@ -49,10 +68,16 @@
     }
 
     .ant-collapse-header .ant-collapse-arrow {
-      right: 50px !important;
-      width: 36px;
+      right: 30px !important;
+      width: 26px;
       transition: all 0.3s;
       transform: rotate(-180deg);
+      top: 45%;
+
+      @include laptop {
+        right: 50px !important;
+        width: 36px;
+      }
 
       &.active {
         transform: rotate(0) translateY(-50%);
@@ -64,8 +89,16 @@
       border-bottom-right-radius: $border-radius;
       background-color: $COLORS-gray_400;
       border-top: 0;
-      padding: 30px 50px;
       box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+
+      @include tablet {
+        padding: 25px 30px;
+      }
+
+      @include aboveHD {
+        padding: 30px 50px;
+      }
 
       .light & {
         background-color: $COLORS-white;
@@ -77,12 +110,37 @@
     }
 
     .ant-collapse-header {
-      padding: 45px 50px;
+      padding: 16px;
+
+      @include tablet {
+        padding: 25px 30px;
+      }
+
+      @include aboveHD {
+        padding: 45px 50px;
+      }
 
       span {
-        font-size: 40px;
-        line-height: 64px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-right: 45px;
         font-family: $FONT-montserrat-Medium;
+
+        @include tablet {
+          margin-right: 60px;
+          font-size: 28px;
+          line-height: 38px;
+        }
+
+        @include desktop {
+          font-size: 32px;
+          line-height: 48px;
+        }
+
+        @include aboveHD {
+          font-size: 40px;
+          line-height: 64px;
+        }
 
         .dark & {
           color: $COLORS-white;

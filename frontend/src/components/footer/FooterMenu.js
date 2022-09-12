@@ -8,7 +8,7 @@ export const FooterMenu = () => {
     <div className="footer-menu">
       <div className="container">
         <Row>
-          <Col span={10}>
+          <Col xxl={{ span: 11 }} xl={{ span: 24 }}>
             <div className="logo-wrapper">
               <img src={logo.default} alt="logo" />
               <h3>Coinz</h3>
@@ -22,15 +22,13 @@ export const FooterMenu = () => {
                 <li>Sed imperdiet enim.</li>
                 <li>Vivamus sit amet.</li>
                 <li>Cras convallis lacus</li>
-              </ul>
-              <ul>
                 <li>Integer orci justo.</li>
                 <li>Nam posuere accumsan.</li>
                 <li>Integer id orci sed</li>
               </ul>
             </div>
           </Col>
-          <Col offset={9} span={5}>
+          <Col xxl={{ offset: 6, span: 7 }} xl={{ span: 24 }}>
             <div className="social-links">
               <a href="#">
                 <img src={facebook} alt="facebook" />

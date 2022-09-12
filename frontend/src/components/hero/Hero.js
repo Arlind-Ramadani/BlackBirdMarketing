@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <div className="hero-wrapper">
       <Row>
-        <Col className="gutter-row" span={12}>
+        <Col lg={{ span: 12 }}>
           <h1>Digital currency leads at market in the right amount.</h1>
           <p>Vestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula, eget suscipit orci. </p>
           <div className="buttons-wrapper">
@@ -16,7 +16,7 @@ export const Hero = () => {
             <OutlineButton text="View Market" />
           </div>
         </Col>
-        <Col className="gutter-row" span={12}>
+        <Col lg={{ span: 12 }}>
           <img src={crypto_banner} alt="crypto banner" />
         </Col>
       </Row>

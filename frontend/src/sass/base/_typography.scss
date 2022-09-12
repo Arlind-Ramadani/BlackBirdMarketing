@@ -51,14 +51,24 @@ h4 {
    * Main titles
    */
 h1 {
-  font-size: 64px;
-  line-height: 102px;
+  font-size: 36px;
+  line-height: 48px;
   font-family: $FONT-montserrat-SemiBold;
   color: $COLORS-white;
 
-  @media (max-width: 1920px) {
+  @include laptop {
+    font-size: 42px;
+    line-height: 58px;
+  }
+
+  @include desktop {
     font-size: 52px;
     line-height: 76px;
+  }
+
+  @include aboveHD {
+    font-size: 64px;
+    line-height: 102px;
   }
 }
 
@@ -66,14 +76,24 @@ h1 {
    * Chapter titles
    */
 h2 {
-  font-size: 64px;
-  line-height: 102px;
+  font-size: 36px;
+  line-height: 48px;
   font-family: $FONT-montserrat-SemiBold;
   color: $COLORS-white;
 
-  @media (max-width: 1920px) {
+  @include laptop {
+    font-size: 42px;
+    line-height: 58px;
+  }
+
+  @include desktop {
     font-size: 52px;
     line-height: 76px;
+  }
+
+  @include aboveHD {
+    font-size: 64px;
+    line-height: 102px;
   }
 
   .light & {
@@ -95,36 +115,71 @@ h3 {
    * Sub-headings
    */
 h4 {
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 22px;
+  line-height: 28px;
   font-family: $FONT-montserrat-Medium;
   color: $COLORS-yellow_200;
   text-transform: uppercase;
+
+  @include laptop {
+    font-size: 28px;
+    line-height: 34px;
+  }
 }
 
 p {
-  font-size: 40px;
-  line-height: 64px;
+  font-size: 22px;
+  line-height: 28px;
   font-family: $FONT-montserrat-Regular;
   color: $COLORS-white;
 
-  @media (max-width: 1920px) {
+  @include laptop {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include desktop {
     font-size: 32px;
     line-height: 48px;
+  }
+
+  @include aboveHD {
+    font-size: 40px;
+    line-height: 64px;
   }
 
   &.xl {
-    font-size: 46px;
+    font-size: 28px;
+    line-height: 32px;
+
+    @include tablet {
+      font-size: 38px;
+      line-height: 42px;
+    }
+
+    @include aboveHD {
+      font-size: 46px;
+    }
   }
 
   &.lg {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 26px;
+    line-height: 38px;
+
+    @include laptop {
+      font-size: 32px;
+      line-height: 48px;
+    }
   }
 
   &.md {
-    font-size: 24px;
-    line-height: 38px;
+    font-size: 20px;
+    line-height: 32px;
+
+    @include laptop {
+      font-size: 24px;
+      line-height: 38px;
+    }
   }
 
   .light & {

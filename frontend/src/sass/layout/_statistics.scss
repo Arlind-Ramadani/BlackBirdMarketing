@@ -1,25 +1,39 @@
 .statistics-wrapper {
   position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-image: url('../../public/images/leftOctagons.png');
-    top: -20%;
-    left: 0;
-    background-position: top left;
+  @include tablet {
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../public/images/leftOctagons.png');
+      top: -20%;
+      left: 0;
+      background-position: top left;
+    }
   }
 
   .statistics-container {
-    width: 1600px;
-    margin: 85px auto 0;
+    margin: 30px 15px;
     text-align: center;
 
+    @include tablet {
+      margin: 85px auto 0;
+      width: 1280px;
+    }
+
+    @include desktop {
+      width: 1600px;
+    }
+
     > img {
-      margin-bottom: 80px;
+      margin-bottom: 40px;
+
+      @include tablet {
+        margin-bottom: 80px;
+      }
     }
 
     h2 {
@@ -27,16 +41,27 @@
     }
 
     > p {
-      margin-bottom: 150px;
+      margin-bottom: 100px;
+
+      @include aboveHD {
+        margin-bottom: 150px;
+      }
     }
 
     .statistic-container {
-      margin: 0 120px;
+      @include tablet {
+        margin: 0 120px;
+      }
 
       .statistic-item {
         display: flex;
         align-items: center;
         margin-bottom: 50px;
+
+        @include mobile {
+          margin-bottom: 30px;
+          flex-wrap: wrap;
+        }
 
         img {
           width: 80px;
@@ -45,9 +70,13 @@
         }
 
         p {
-          font-size: 60px;
+          font-size: 40px;
           line-height: 1.3;
           font-family: $FONT-montserrat-SemiBold;
+
+          @include aboveHD {
+            font-size: 60px;
+          }
 
           .dark & {
             opacity: 0.7;
@@ -55,27 +84,58 @@
         }
 
         .title {
-          width: 350px;
           display: flex;
+          align-items: center;
+
+          @include mobile {
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
+          @include tablet {
+            width: 350px;
+          }
         }
 
         .line {
           width: 100%;
-          margin-left: 50px;
+
+          @include tablet {
+            margin-left: 50px;
+          }
+
+          .ant-progress-show-info .ant-progress-outer {
+            @include mobile {
+              padding: 0;
+              margin: 0;
+            }
+          }
 
           .unit {
             display: flex;
             justify-content: space-between;
-            padding: 0 20px;
+
+            @include tablet {
+              padding: 0 20px;
+            }
 
             p {
               font-family: $FONT-montserrat-Regular;
               opacity: 1;
-              font-size: 40px;
+              font-size: 22px;
+
+              @include tablet {
+                font-size: 40px;
+              }
 
               span {
-                font-size: 28px;
+                font-size: 16px;
                 font-family: $FONT-montserrat-Light;
+
+                @include tablet {
+                  font-size: 28px;
+                }
               }
             }
           }

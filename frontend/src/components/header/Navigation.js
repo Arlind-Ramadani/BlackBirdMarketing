@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Navigation = () => {
+export const Navigation = (mobileMenu) => {
   return (
-    <ul className="navigation-wrapper">
+    <ul className={'navigation-wrapper' + (mobileMenu.mobileMenu ? '' : ' active')}>
       <li>
         <a href="#">Feature</a>
       </li>

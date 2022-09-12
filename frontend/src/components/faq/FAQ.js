@@ -11,7 +11,7 @@ export const FAQ = () => {
   return (
     <div className="faq-wrapper">
       <Row>
-        <Col span={12}>
+        <Col lg={{ span: 12 }}>
           <div className="faq-content">
             <img src={colorScheme === 'dark' ? octagon : octagonWhite} alt="octagon" />
             <h2>Frequently Asked Questions</h2>
@@ -20,7 +20,7 @@ export const FAQ = () => {
             <img src={crypto_banner} alt="crypto_banner" className="faq-image" />
           </div>
         </Col>
-        <Col span={12}>
+        <Col lg={{ span: 12 }}>
           <Collapse
             accordion
             defaultActiveKey={['1']}

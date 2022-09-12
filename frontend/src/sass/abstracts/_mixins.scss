@@ -1,0 +1,29 @@
+@mixin aboveHD {
+  @include media('>desktop') {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include media('>=laptop') {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include media('>=tablet') {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media('>=mobile') {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include media('<=mobile') {
+    @content;
+  }
+}

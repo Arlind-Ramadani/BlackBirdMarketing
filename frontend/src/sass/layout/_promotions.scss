@@ -1,20 +1,39 @@
 .promotions-wrapper {
-  padding-left: 174px;
-  padding-right: 420px;
-  padding-bottom: 220px;
-  padding-top: 190px;
+  padding-top: 70px;
+  padding-bottom: 140px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-image: url('../../public/images/rightOctagons.png');
-    bottom: 0;
-    right: 0;
-    background-position: bottom right;
+  @include tablet {
+    padding-left: 90px;
+    padding-right: 200px;
+    padding-top: 130px;
+  }
+
+  @include desktop {
+    padding-right: 320px;
+  }
+
+  @include aboveHD {
+    padding-left: 174px;
+    padding-right: 420px;
+    padding-bottom: 220px;
+    padding-top: 190px;
+  }
+
+  @include tablet {
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../public/images/rightOctagons.png');
+      bottom: 0;
+      right: 0;
+      background-position: bottom right;
+    }
   }
 
   .promotions-slider {
@@ -23,14 +42,25 @@
       font-size: 46px;
       color: $COLORS-white;
       left: auto;
-      right: -118px;
-      top: 44%;
+      right: -148px;
+      top: 42%;
       padding: 16px;
       border-radius: 50%;
       background-color: $COLORS-gray-400;
       width: 79px;
       height: 79px;
       box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+      z-index: 2;
+
+      @include mobile {
+        right: 0;
+        top: auto;
+        bottom: -160px;
+      }
+
+      @include aboveHD {
+        top: 44%;
+      }
 
       .light & {
         background-color: $COLORS-white;
@@ -39,33 +69,75 @@
     }
 
     .slick-prev {
-      top: 56%;
+      top: 58%;
+
+      @include mobile {
+        right: 25%;
+        top: auto;
+      }
+
+      @include aboveHD {
+        top: 56%;
+      }
     }
 
     .slider-item {
       display: flex !important;
       position: relative;
       overflow: visible;
-      padding-left: 176px;
-      padding-top: 91px;
-      padding-bottom: 91px;
+
+      @include tablet {
+        padding-left: 176px;
+        padding-top: 91px;
+        padding-bottom: 91px;
+      }
 
       img {
         position: absolute;
         left: 0;
         top: 0;
-        height: 100%;
         object-fit: contain;
         background-image: url('../../public/images/promotionsBackground.png');
         background-size: cover;
+
+        @include mobile {
+          width: 100%;
+        }
+
+        @include tablet {
+          height: 100%;
+          max-height: 650px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        @include aboveHD {
+          max-height: 100%;
+        }
       }
 
       .content {
         background-color: $COLORS-gray-400;
-        padding: 140px 140px 140px 40%;
+        padding: 170px 30px 40px 30px;
         border-radius: 48px;
-        width: calc(100% - 30px);
+        width: 100%;
         box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+
+        @include mobile {
+          margin-top: 250px;
+        }
+
+        @include tablet {
+          padding: 70px 30px 70px 40%;
+        }
+
+        @include desktop {
+          padding: 100px 60px 100px 40%;
+        }
+
+        @include aboveHD {
+          padding: 140px 140px 140px 40%;
+        }
 
         .light & {
           background-color: $COLORS-white;

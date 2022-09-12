@@ -2,8 +2,12 @@
   background-image: url('../../public/images/backgroundFooterTop.png');
   background-position: top center;
   background-repeat: no-repeat;
-  margin-top: -800px;
-  padding-top: 900px;
+  padding-top: 50px;
+
+  @include tablet {
+    margin-top: -800px;
+    padding-top: 900px;
+  }
 
   .light & {
     background-image: none;
@@ -17,24 +21,60 @@
     background-image: url('../../public/images/backgroundFooter.png');
     background-position: bottom center;
     background-repeat: no-repeat;
-    padding-bottom: 115px;
-    height: 120vh;
+    background-size: cover;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @include tablet {
+      height: 150vh;
+    }
+
+    @include desktop {
+      height: 120vh;
+    }
+
+    @include aboveHD {
+      padding-bottom: 115px;
+    }
 
     .light & {
       background-image: url('../../public/images/backgroundFooterWhite.png');
     }
 
     .footer-menu {
-      margin-top: 230px;
+      text-align: center;
+      margin-top: 50px;
+
+      @include tablet {
+        margin-top: 130px;
+      }
+
+      @include desktop {
+        text-align: left;
+      }
+
+      @include aboveHD {
+        margin-top: 230px;
+      }
+
+      .ant-col {
+        @include mobile {
+          margin: 0 auto;
+        }
+      }
 
       .logo-wrapper {
         display: flex;
         align-items: center;
         gap: 10px;
         margin-bottom: 10px;
+        justify-content: center;
+
+        @include desktop {
+          justify-content: left;
+        }
       }
 
       .quick-links {
@@ -52,38 +92,82 @@
           margin-top: 30px;
 
           li {
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 20px;
+            line-height: 22px;
             color: $COLORS-white;
             font-family: $FONT-montserrat-Regular;
+            margin-bottom: 30px;
+            flex-basis: 50%;
+
+            @include tablet {
+              flex-basis: 33%;
+            }
+
+            @include desktop {
+              font-size: 22px;
+              line-height: 25px;
+            }
+
+            @include aboveHD {
+              font-size: 24px;
+              line-height: 29px;
+            }
           }
         }
       }
 
       .social-links {
         display: flex;
+        justify-content: center;
         gap: 36px;
-        margin-bottom: 80px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+
+        @include tablet {
+          margin-bottom: 80px;
+        }
+
+        @include desktop {
+          justify-content: left;
+          margin-top: 0;
+        }
 
         a {
           background-color: $COLORS-green-500;
-          width: 75px;
-          height: 75px;
+          width: 48px;
+          height: 48px;
           display: flex;
           justify-content: center;
           align-items: center;
           border-radius: 50%;
           padding: 13px;
+
+          @include tablet {
+            width: 75px;
+            height: 75px;
+            padding: 13px;
+          }
+
+          img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
         }
       }
 
       .language-change {
-        width: 420px;
+        width: 100%;
         background-color: transparent;
         border-radius: $border-radius;
         border: 1px solid $COLORS-blue-300;
-        margin-bottom: 80px;
+        margin-bottom: 30px;
         color: $COLORS-white;
+
+        @include tablet {
+          width: 420px;
+          margin-bottom: 80px;
+        }
 
         .ant-select-arrow {
           right: 30px;
@@ -91,21 +175,36 @@
         }
 
         .ant-select-selector {
-          font-size: 36px;
-          line-height: 44px;
+          font-size: 22px;
+          line-height: 26px;
           font-family: $FONT-montserrat-Regular;
           color: $COLORS-white;
           height: auto;
+
+          @include tablet {
+            font-size: 28px;
+            line-height: 32px;
+          }
+
+          @include aboveHD {
+            font-size: 36px;
+            line-height: 44px;
+          }
 
           img {
             margin-right: 16px;
           }
 
           .ant-select-selection-item {
-            line-height: 44px;
             display: flex;
             align-items: center;
-            padding: 20px 30px;
+            line-height: 1;
+            padding: 16px;
+
+            @include tablet {
+              padding: 20px 30px;
+              line-height: 44px;
+            }
           }
         }
 
@@ -119,24 +218,54 @@
     .subscription-wrapper {
       text-align: center;
 
+      @include mobile {
+        margin-top: 100px;
+      }
+
       .users-number {
-        font-size: 94px;
-        line-height: 114px;
+        font-size: 52px;
+        line-height: 52px;
         font-family: $FONT-montserrat-SemiBold;
         margin-bottom: 24px;
+
+        @include laptop {
+          font-size: 74px;
+          line-height: 74px;
+        }
+
+        @include aboveHD {
+          font-size: 94px;
+          line-height: 114px;
+        }
       }
 
       .action {
-        margin-top: 124px;
+        margin-top: 74px;
+
+        @include aboveHD {
+          margin-top: 124px;
+        }
 
         p {
-          font-size: 69px;
-          line-height: 84px;
+          font-size: 42px;
+          line-height: 46px;
           margin-bottom: 42px;
+
+          @include tablet {
+            font-size: 61px;
+            line-height: 68px;
+          }
+
+          @include aboveHD {
+            font-size: 69px;
+            line-height: 84px;
+          }
         }
 
         .btn {
-          width: 400px;
+          @include tablet {
+            width: 400px;
+          }
         }
       }
     }

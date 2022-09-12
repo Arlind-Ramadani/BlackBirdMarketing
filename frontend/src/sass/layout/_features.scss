@@ -1,9 +1,22 @@
 .features-wrapper {
-  padding: 0 185px;
+  padding: 0 15px;
+
+  @include tablet {
+    padding: 0 100px;
+  }
+
+  @include desktop {
+    padding: 0 185px;
+  }
 
   h2 {
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @include aboveHD {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
   }
 
   .modal-wrapper {
@@ -39,12 +52,20 @@
   .video-wrapper {
     border-radius: 30px;
     width: 100%;
-    height: 628px;
+    height: 280px;
     position: relative;
     margin-top: 50px;
     overflow: hidden;
     background-image: url('../../public/images/videoImage.png');
     background-size: cover;
+
+    @include tablet {
+      height: 440px;
+    }
+
+    @include aboveHD {
+      height: 628px;
+    }
 
     &::before {
       content: '';
@@ -65,6 +86,14 @@
       border: none;
       cursor: pointer;
       z-index: 2;
+
+      @include mobile {
+        img {
+          height: 80px;
+          width: 80px;
+          object-fit: contain;
+        }
+      }
     }
   }
 
@@ -72,25 +101,75 @@
     background-image: url('../../public/images/octagonOutline.png');
     background-repeat: no-repeat;
     display: flex;
-    gap: 70px;
-    padding-left: 60px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      margin-bottom: -100px;
+    }
+
+    @include tablet {
+      gap: 40px;
+      padding-left: 20px;
+    }
+
+    @include desktop {
+      gap: 70px;
+    }
+
+    @include aboveHD {
+      padding-left: 60px;
+    }
 
     .container-left {
       margin-top: 300px;
+
+      @include mobile {
+        margin-top: 50px;
+      }
     }
 
     .container-right {
-      margin-top: 150px;
+      @include tablet {
+        margin-top: 150px;
+      }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+        position: relative;
+        top: -180px;
+      }
     }
 
     .feature-item {
-      padding: 40px 40px 26px 40px;
-      width: 348px;
-      min-height: 348px;
+      padding: 20px;
+      width: 190px;
+      min-height: 220px;
       background-color: $COLORS-gray_400;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       border-radius: 34px;
-      box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+      box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.4);
+
+      @include tablet {
+        box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+        padding: 30px 30px 26px 30px;
+        width: 270px;
+        min-height: 270px;
+        margin-bottom: 40px;
+      }
+
+      @include desktop {
+        padding: 40px 40px 26px 40px;
+        width: 310px;
+        min-height: 310px;
+      }
+
+      @include aboveHD {
+        width: 348px;
+        min-height: 348px;
+      }
 
       .light & {
         background-color: $COLORS-white;
@@ -98,19 +177,54 @@
 
       img {
         margin-bottom: 30px;
+        width: 50px;
+
+        @include desktop {
+          width: auto;
+        }
       }
 
       p {
-        font-size: 36px;
-        line-height: 44px;
+        font-size: 22px;
+        line-height: 28px;
         font-family: $FONT-montserrat-Regular;
 
+        @include tablet {
+          font-size: 28px;
+          line-height: 32px;
+        }
+
+        @include desktop {
+          font-size: 32px;
+          line-height: 38px;
+        }
+
+        @include aboveHD {
+          font-size: 36px;
+          line-height: 44px;
+        }
+
         span {
-          font-size: 56px;
-          line-height: 68px;
+          font-size: 36px;
+          line-height: 38px;
           font-family: $FONT-montserrat-SemiBold;
           display: block;
           margin-bottom: 16px;
+
+          @include tablet {
+            font-size: 42px;
+            line-height: 46px;
+          }
+
+          @include desktop {
+            font-size: 46px;
+            line-height: 52px;
+          }
+
+          @include aboveHD {
+            font-size: 56px;
+            line-height: 68px;
+          }
         }
       }
     }

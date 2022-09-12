@@ -28,7 +28,7 @@ export const Features = () => {
       </div>
 
       <Row>
-        <Col span={11}>
+        <Col lg={{ span: 11 }}>
           <img src={colorScheme === 'dark' ? octagon : octagonWhite} alt="octagon" />
           <h2>Fusce placerat enim et odio</h2>
           <p>Sed imperdiet enim ligula, vitae viverra justo porta vel.</p>
@@ -39,7 +39,7 @@ export const Features = () => {
             </button>
           </div>
         </Col>
-        <Col offset={3} span={10}>
+        <Col lg={{ offset: 3, span: 10 }}>
           <div className="feature-container">
             <div className="container-left">
               <div className="feature-item">

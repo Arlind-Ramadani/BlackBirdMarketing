@@ -7,6 +7,16 @@
 }
 
 .container {
-  padding-right: 157px;
-  padding-left: 157px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include tablet {
+    padding-right: 107px;
+    padding-left: 107px;
+  }
+
+  @include desktop {
+    padding-right: 157px;
+    padding-left: 157px;
+  }
 }

@@ -1,16 +1,28 @@
 .btn {
   color: $COLORS-white;
-  padding: 26px 68px;
+  padding: 16px 38px;
+  font-size: 18px;
+  line-height: 22px;
   border: none;
   outline: none;
   box-shadow: none;
   font-family: $FONT-montserrat-Medium;
-  font-size: 26px;
-  line-height: 32px;
   border-radius: $border-radius;
   background-color: transparent;
   cursor: pointer;
   text-transform: uppercase;
+
+  @include tablet {
+    padding: 20px 48px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include desktop {
+    padding: 26px 68px;
+    font-size: 26px;
+    line-height: 32px;
+  }
 
   &.btn-filled {
     background-color: $COLORS-yellow_400;

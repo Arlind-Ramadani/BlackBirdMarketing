@@ -1,12 +1,51 @@
 .navigation-wrapper {
   display: flex;
   border-right: 1px solid rgba($color: $COLORS-white, $alpha: 0.5);
-  margin-right: 89px;
+  margin-right: 60px;
+
+  @include mobile {
+    display: none;
+
+    &.active {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      border: 0;
+      margin-top: 40px;
+
+      li {
+        margin-bottom: 60px;
+
+        &:first-of-type a {
+          padding: 0;
+          background-color: transparent;
+
+          .light & {
+            background-color: transparent;
+          }
+        }
+
+        a {
+          .light & {
+            color: $COLORS-black;
+          }
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    margin-right: 89px;
+  }
 
   li {
-    margin-right: 50px;
+    margin-right: 20px;
 
-    @media (min-width: 2400px) {
+    @include desktop {
+      margin-right: 50px;
+    }
+
+    @include aboveHD {
       margin-right: 100px;
     }
 
@@ -24,12 +63,17 @@
     }
 
     a {
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 20px;
+      line-height: 20px;
       color: $COLORS-white;
       font-family: $FONT-montserrat-SemiBold;
 
-      @media (min-width: 2000px) {
+      @include desktop {
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      @include aboveHD {
         font-size: 32px;
         line-height: 39px;
       }

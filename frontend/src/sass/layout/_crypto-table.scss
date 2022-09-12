@@ -1,8 +1,20 @@
 .cryptoTable-wrapper {
-  margin: 340px 170px 70px 170px;
+  margin: 150px 15px 70px 15px;
   display: flex;
   flex-direction: column;
   align-items: self-end;
+
+  @include tablet {
+    margin: 200px 100px 70px 100px;
+  }
+
+  @include desktop {
+    margin: 200px 170px 70px 170px;
+  }
+
+  @include aboveHD {
+    margin: 340px 170px 70px 170px;
+  }
 
   .ant-table-wrapper {
     width: 100%;
@@ -12,19 +24,32 @@
     background-color: transparent;
     color: $COLORS-blue-200;
     font-family: $FONT-inter-Regular;
-    font-size: 26px;
-    line-height: 37px;
+    font-size: 24px;
+    line-height: 33px;
+
+    @include mobile {
+      overflow: scroll;
+    }
+
+    @include aboveHD {
+      font-size: 26px;
+      line-height: 37px;
+    }
 
     .ant-table-tbody > tr.ant-table-row:hover > td {
       background-color: transparent;
     }
 
     .ant-table-cell {
-      padding: 36px 12px;
+      padding: 24px 12px;
       border-bottom: 2px solid #e2e8f0;
       background-color: transparent;
       color: inherit;
       vertical-align: middle;
+
+      @include aboveHD {
+        padding: 36px 12px;
+      }
     }
 
     .ant-table-column-sorter-inner {
@@ -36,9 +61,14 @@
     .ant-table-thead {
       background-color: #f7fafc33;
       font-family: $FONT-inter-Bold;
-      font-size: 22px;
-      line-height: 30px;
+      font-size: 18px;
+      line-height: 22px;
       text-transform: uppercase;
+
+      @include aboveHD {
+        font-size: 22px;
+        line-height: 30px;
+      }
 
       .ant-table-cell {
         border: none;
@@ -62,11 +92,21 @@
 
   .cryptoTable-search {
     border: 1px solid #c1d6e9;
-    padding: 22px 50px;
-    width: 780px;
     background-color: transparent;
-    margin-bottom: 67px;
+    padding: 22px 40px;
+    width: 100%;
+    margin-bottom: 45px;
     border-radius: $border-radius;
+
+    @include tablet {
+      width: 650px;
+    }
+
+    @include aboveHD {
+      width: 780px;
+      margin-bottom: 67px;
+      padding: 22px 50px;
+    }
 
     .ant-input-wrapper {
       display: flex;
@@ -130,8 +170,16 @@
 
 .ant-table-pagination.ant-pagination {
   background-color: #ffffff33;
-  padding: 33px 45px;
+  padding: 16px;
   font-family: $FONT-inter-Regular;
+
+  @include tablet {
+    padding: 20px 45px;
+  }
+
+  @include aboveHD {
+    padding: 33px 45px;
+  }
 
   .ant-select:not(.ant-select-customize-input) .ant-select-selector,
   li button,
@@ -141,8 +189,12 @@
     border: 1px solid #e2e8f0;
     font-size: 14px;
     line-height: 20px;
-    padding: 11px 20px;
+    padding: 8px 12px;
     height: auto;
+
+    @include tablet {
+      padding: 11px 20px;
+    }
   }
 
   li {
@@ -154,7 +206,11 @@
 
     a:not(.ant-pagination-item-link),
     button {
-      padding: 16px 20px;
+      padding: 10px 16px;
+
+      @include tablet {
+        padding: 16px 20px;
+      }
     }
 
     &.ant-pagination-jump-next {
